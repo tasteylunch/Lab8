@@ -43,7 +43,6 @@ public class CustomListTest {
         assertTrue(list.hasCity(city));
     }
 
-
     @Test
     void testDelete() throws Exception {
         list = MockCityList();
@@ -54,5 +53,13 @@ public class CustomListTest {
         assertThrows(Exception.class, () -> {
             list.delete(city);
         } );
+    }
+    @Test
+    void testCount() {
+        list = new CustomList(null,new ArrayList<>());
+        assertEquals(0,list.countCities());
+        City city = new City("Charlottetown", "Prince Edward Island");
+        list.add(city);
+        assertEquals(1,list.countCities());
     }
 }
