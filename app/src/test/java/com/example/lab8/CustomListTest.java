@@ -59,7 +59,7 @@ public class CustomListTest {
         list = new CustomList(null,new ArrayList<>());
         assertEquals(0,list.countCities());
         City city = new City("Charlottetown", "Prince Edward Island");
-        list.add(city);
+        list.addCity(city);
         assertEquals(1,list.countCities());
     }
 }
